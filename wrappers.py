@@ -3,7 +3,9 @@ from collections import deque
 import gym
 import numpy as np
 import cv2
-
+""" Wrappers will allow us to add functionality to environments, 
+    such as modifying observations and rewards to be fed to our agent.
+"""
 
 class MaxAndSkipEnv(gym.Wrapper):
     def __init__(self, env, skip=4):
