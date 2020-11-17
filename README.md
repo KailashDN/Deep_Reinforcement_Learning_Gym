@@ -37,19 +37,19 @@ Steps:
 1. Create super mario environment(*gym_super_mario_bros.make("SuperMarioBros-v0")*)
 2. apply *JoypadSpace(env, ACTION_SPACE)* environment wrapper to convert binary to discrete action space (ACTION_SPACE = RIGHT_ONLY) Apply wrapper class to modify frames
 3. Create 2 policy network since we are implementing Double DQN
-    1 `policy_net`
-    2 `target_net`
+    - 3.1 `policy_net`
+    - 3.2 `target_net`
 4. Create replay memory of predefined capacity of 100_000 transitions.
 5. Set Hyperparamets like *total_steps*, *reward history*, *exploration(**α**)* which will be decay so that Q learning explore more in initial stage and exploitation increase with decaying **α** 
 6. Iterate the model for *NUM_EPISODES*(10_000):
-    1 At each step we render the environment
-    2 Get next **action** using random value. If random value is smaller than current **α** then random set of *RIGHT_ONLY* action returned else policy_net predict and return        max *Q value* 
-    3 Perform the action using environment step function(defined in wrapper class) which returns *next_state*, *reward*, *done*, *info* 
-    4 If we *done* or if mario *life* is less than 2 the end the step loop here and start next episode. Else,
-    5 Add the transition to the replay memory using *push* function
-    6 Increment the current reward and total steps
-    7 
-    5 
+    - 6.1 At each step we render the environment
+    - 6.2 Get next **action** using random value. If random value is smaller than current **α** then random set of *RIGHT_ONLY* action returned else policy_net predict and return        max *Q value* 
+    - 6.3 Perform the action using environment step function(defined in wrapper class) which returns *next_state*, *reward*, *done*, *info* 
+    - 6.4 If we *done* or if mario *life* is less than 2 the end the step loop here and start next episode. Else,
+    - 6.5 Add the transition to the replay memory using *push* function
+    - 6.6 Increment the current reward and total steps
+    6.7 
+    6.5 
     
     
 
