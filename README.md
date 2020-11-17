@@ -54,11 +54,20 @@ Steps:
 
 ## Results:
 Super Mario game trained on GTX 1050Ti using TensorFlow 1.5.2(Multi GPU paralle version coming soon!!)
-![Training](/Images/Mario_Training.png) ![Training](/Images/Mario_Training1.png) ![Training](/Images/Mario_Training2.png)
+![Training](/Images/Mario_Training.png)![Training](/Images/Mario_Training1.png)![Training](/Images/Mario_Training2.png)
 
-## Citation
+## Citations
+- Algorithm and code: https://console.paperspace.com/gcn-team/notebook/pr5ddt1g9
+- Understanding of algorithm:
+    - https://www.statworx.com/de/blog/using-reinforcement-learning-to-play-super-mario-bros-on-nes-using-tensorflow/
+    - https://towardsdatascience.com/cartpole-introduction-to-reinforcement-learning-ed0eb5b58288
+    - https://github.com/gabegrand/Super-Mario-RL
+    - https://stats.stackexchange.com/questions/326788/when-to-choose-sarsa-vs-q-learning
+    - https://stats.stackexchange.com/questions/326788/when-to-choose-sarsa-vs-q-learning
+    - https://www.cse.unsw.edu.au/~cs9417ml/RL1/algorithms.html
+    - https://towardsdatascience.com/reinforcement-learning-markov-decision-process-part-2-96837c936ec3
 
-## Licence
+## License
 [MIT Licence](/LICENSE)
 
 
