@@ -53,4 +53,4 @@ Steps:
     - 6.6 update the exploration rate **α**
 
 ## Results:
-![GitHub Logo](/Images/DQN.png)
+![Training](/Images/Mario_Training.png)
