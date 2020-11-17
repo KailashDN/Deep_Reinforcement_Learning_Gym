@@ -14,8 +14,8 @@ In Double Deep Q Learning, the agent uses two neural networks to learn and predi
 ### 1. DeepQ_Network.py: 
 Convolutional Neural Network Model to learn and predict wht action to take. Our model architecture is the same as in the deep mind atari paper "Playing Atari with Deep        Reinforcement Learning"
 It takes two inputs:
-1. :param frame_dim: The dimension of the given frames
-2. :param num_actions: The number of possible actions
+1. param frame_dim: The dimension of the given frames
+2. param num_actions: The number of possible actions
 
 ### 2. wrappers.py:
 Wrappers will allow us to add functionality to environments, such as modifying observations and rewards to be fed to our agent.
