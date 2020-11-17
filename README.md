@@ -12,12 +12,20 @@ In Double Deep Q Learning, the agent uses two neural networks to learn and predi
 
 ## Implementation:
 ### 1. DeepQ_Network.py: 
-Convolutional Neural Network Model to learn and predict wht action to take. Our model architecture is the same as in the deep mind atari paper "Playing Atari with Deep        Reinforcement Learning"
-It takes two inputs:
-1. param frame_dim: The dimension of the given frames
-2. param num_actions: The number of possible actions
+Convolutional Neural Network Model to learn and predict wht action to take. Our model architecture is the same as in the deep mind atari paper "Playing Atari with Deep        Reinforcement Learning" It takes two inputs:
+    1. param frame_dim: The dimension of the given frames
+    2. param num_actions: The number of possible actions
 
 ### 2. wrappers.py:
 Wrappers will allow us to add functionality to environments, such as modifying observations and rewards to be fed to our agent.
 #### Functionality:
-    1. MaxAndSkipEnv(env, skip=frame_skip):
+    1. MaxAndSkipEnv(env, skip=frame_skip): In super mario environments, we also apply frame-skipping internally before doing any state-processing. Effectively, we are concatenating 4 frames selected from the span of 16 raw frames.
+    2. WarpFrame(env, width=frame_dim[0], height=frame_dim[1]): Warp frames to 84x84 as done in the Nature paper and later work. If the environment uses dictionary observations, `dict_space_key` can be specified which indicates which observation should be warped.
+    3. LazyFrames(list(self.frames)): This object ensures that common frames between the observations are only stored once. It exists purely to optimize memory usage which can be huge for DQN's 1M frames replay buffers. This object should only be converted to numpy array before being passed to the model.
+    4. FrameStack(env, frame_dim[2]): Stack 'k' (frame_dim[2]) last frames. Returns lazy array, which is much more memory efficient.
+    
+### 3. replay_from_memory.py:
+Stores (state, action, reward, next_state, done) transition in memory. Here we store 100_000 transitions. The policy net train on batch sampled from replay memory and sample transitions at random.
+
+### 4. main_Mario.py:
+Run main_Mario.py to train super mario. 
