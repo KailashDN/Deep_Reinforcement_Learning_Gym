@@ -1,11 +1,22 @@
 # Deep Reinforcement Learning:
 ### Implementation of Deep Reinforcement learning Algorithm like DDQN, policy gradient, actor critic
+
+[![PackageVersion][pypi-version]][pypi-home]
+[![PythonVersion][python-version]][python-home]
+[![License][pypi-license]](LICENSE)
+
+[pypi-version]: https://badge.fury.io/py/gym-super-mario-bros.svg
+[pypi-home]: https://badge.fury.io/py/gym-super-mario-bros
+[python-version]: https://img.shields.io/pypi/pyversions/gym-super-mario-bros.svg
+[python-home]: https://python.org
+[pypi-license]: https://img.shields.io/pypi/l/gym-super-mario-bros.svg
+    
 ## Abstract
 Reinforcement learning is the family of learning algorithms in which an agent learns from its environment by interacting with it. What does it learn? Informally, an agent learns to take actions that bring it from its current state to the best (optimal) reachable state.
 
 In reinforcement learning we often use a learning concept called Q-learning. Q-learning is based on so called Q-values, that help the agent determining the optimal action, given the current state of the environment. Q-values are „discounted“ future rewards, that our agent collects during training by taking actions and moving through the different states of the environment. Q-values themselves are tried to be approximated during training, either by simple exploration of the environment or by using a function approximator, such as a deep neural network (as in our case here). Mostly, we select in each state the action that has the highest Q-value, i.e. the highest discounuted future reward, givent the current state of the environment.
 
-![GitHub Logo](/Images/DQN.png)
+![DQN](/Images/DQN.png)
 [Image credit:!(https://mc.ai/introduction-to-double-deep-q-learning-ddqn/)]
 
 In Double Deep Q Learning, the agent uses two neural networks to learn and predict what action to take at every step. One network, referred to as the Q network or the online network, is used to predict what to do when the agent encounters a new state. It takes in the state as input and outputs Q values for the possible actions that could be taken. 
@@ -41,7 +52,7 @@ Steps:
     - 3.2 `target_net`
 4. Create replay memory of predefined capacity of 100_000 transitions.
 5. Set Hyperparamets like *total_steps*, *reward history*, *exploration(**α**)* which will be decay so that Q learning explore more in initial stage and exploitation increase with decaying **α** 
-6. Iterate the model for NUM_EPISODES(10_000):
+6. Iterate the model for *NUM_EPISODES*(10_000):
     - 6.1 At each step we render the environment
     - 6.2 Get next **action** using random value. If random value is smaller than current **α** then random set of *RIGHT_ONLY* action returned else policy_net predict and  update the weights of the target model if necessarymax *Q value* 
     - 6.3 Perform the action using environment step function(defined in wrapper class) which returns *next_state*, *reward*, *done*, *info* 
@@ -51,4 +62,20 @@ Steps:
     - 6.7 Trains the policy net on a batch from the replay memory
     - 6.5 Update the weights of the target model if necessary
     - 6.6 update the exploration rate **α**
+
+## Results:
+Super Mario game trained on GTX 1050Ti using TensorFlow 1.5.2(TF2.x Multi GPU parallel version coming soon!!)
+![Training](/Images/Mario_Training.png)![Training](/Images/Mario_Training1.png)![Training](/Images/Mario_Training2.png)
+
+## Citations
+- https://console.paperspace.com/gcn-team/notebook/pr5ddt1g9
+- https://github.com/p-christ/Deep-Reinforcement-Learning-Algorithms-with-PyTorch
+- https://www.statworx.com/de/blog/using-reinforcement-learning-to-play-super-mario-bros-on-nes-using-tensorflow/
+- https://mc.ai/introduction-to-double-deep-q-learning-ddqn/
+- https://stats.stackexchange.com/questions/326788/when-to-choose-sarsa-vs-q-learning
+- https://www.cse.unsw.edu.au/~cs9417ml/RL1/algorithms.html
+
+## License
+[MIT License](/LICENSE)
+
 
