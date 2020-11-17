@@ -20,8 +20,11 @@ Convolutional Neural Network Model to learn and predict wht action to take. Our 
 Wrappers will allow us to add functionality to environments, such as modifying observations and rewards to be fed to our agent.
 #### Functionality:
     1. MaxAndSkipEnv(env, skip=frame_skip): In super mario environments, we also apply frame-skipping internally before doing any state-processing. Effectively, we are concatenating 4 frames selected from the span of 16 raw frames.
+    
     2. WarpFrame(env, width=frame_dim[0], height=frame_dim[1]): Warp frames to 84x84 as done in the Nature paper and later work. If the environment uses dictionary observations, `dict_space_key` can be specified which indicates which observation should be warped.
+    
     3. LazyFrames(list(self.frames)): This object ensures that common frames between the observations are only stored once. It exists purely to optimize memory usage which can be huge for DQN's 1M frames replay buffers. This object should only be converted to numpy array before being passed to the model.
+    
     4. FrameStack(env, frame_dim[2]): Stack 'k' (frame_dim[2]) last frames. Returns lazy array, which is much more memory efficient.
     
 ### 3. replay_from_memory.py:
