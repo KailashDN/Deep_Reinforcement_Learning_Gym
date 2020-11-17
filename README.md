@@ -53,7 +53,7 @@ Steps:
     - 6.6 update the exploration rate **α**
 
 ## Results:
-Super Mario game trained on GTX 1050Ti using TensorFlow 1.5.2(Multi GPU paralle version coming soon!!)
+Super Mario game trained on GTX 1050Ti using TensorFlow 1.5.2(TF2.x Multi GPU parallel version coming soon!!)
 ![Training](/Images/Mario_Training.png)![Training](/Images/Mario_Training1.png)![Training](/Images/Mario_Training2.png)
 
 ## Citations
@@ -62,7 +62,6 @@ Super Mario game trained on GTX 1050Ti using TensorFlow 1.5.2(Multi GPU paralle 
     - https://www.statworx.com/de/blog/using-reinforcement-learning-to-play-super-mario-bros-on-nes-using-tensorflow/
     - https://towardsdatascience.com/cartpole-introduction-to-reinforcement-learning-ed0eb5b58288
     - https://github.com/gabegrand/Super-Mario-RL
-    - https://stats.stackexchange.com/questions/326788/when-to-choose-sarsa-vs-q-learning
     - https://stats.stackexchange.com/questions/326788/when-to-choose-sarsa-vs-q-learning
     - https://www.cse.unsw.edu.au/~cs9417ml/RL1/algorithms.html
     - https://towardsdatascience.com/reinforcement-learning-markov-decision-process-part-2-96837c936ec3
