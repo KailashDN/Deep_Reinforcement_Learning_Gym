@@ -5,4 +5,4 @@ Reinforcement learning is the family of learning algorithms in which an agent le
 In reinforcement learning we often use a learning concept called Q-learning. Q-learning is based on so called Q-values, that help the agent determining the optimal action, given the current state of the environment. Q-values are „discounted“ future rewards, that our agent collects during training by taking actions and moving through the different states of the environment. Q-values themselves are tried to be approximated during training, either by simple exploration of the environment or by using a function approximator, such as a deep neural network (as in our case here). Mostly, we select in each state the action that has the highest Q-value, i.e. the highest discounuted future reward, givent the current state of the environment.
 
 ![GitHub Logo](/Images/DQN.png)
-Format: ![Alt Text](https://mc.ai/introduction-to-double-deep-q-learning-ddqn/)
+Credit: (https://mc.ai/introduction-to-double-deep-q-learning-ddqn/)
