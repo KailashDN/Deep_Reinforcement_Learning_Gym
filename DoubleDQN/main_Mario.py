@@ -13,7 +13,7 @@ from DoubleDQN.replay_from_memory import ReplayMemory
 from wrappers import wrapper
 
 FRAME_DIM = (84, 84, 4)
-ACTION_SPACE = RIGHT_ONLY
+ACTION_SPACE = RIGHT_ONLY   # We can also use other action space COMPLEX_MOVEMENT( for left, right, up and down actions)
 REPLAY_MEMORY_CAPACITY = 100_000
 NUM_EPISODES = 10_000
 MAX_STEPS_PER_GAME = 1000
@@ -77,7 +77,7 @@ def train_policy_model(replay_memory, policy_model, target_model):
 
 
 env = gym_super_mario_bros.make("SuperMarioBros-v0")
-env = JoypadSpace(env, ACTION_SPACE)
+env = JoypadSpace(env, ACTION_SPACE)    # An environment wrapper to convert binary to discrete action space.
 # apply the wrapper
 env = wrapper(env, FRAME_DIM)
 
