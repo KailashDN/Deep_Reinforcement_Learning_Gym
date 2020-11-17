@@ -53,4 +53,12 @@ Steps:
     - 6.6 update the exploration rate **α**
 
 ## Results:
-![Training](/Images/Mario_Training.png)
+Super Mario game trained on GTX 1050Ti using TensorFlow 1.5.2(Multi GPU paralle version coming soon!!)
+![Training](/Images/Mario_Training.png) ![Training](/Images/Mario_Training1.png) ![Training](/Images/Mario_Training2.png)
+
+## Citation
+
+## Licence
+[MIT Licence](/LICENSE)
+
+
