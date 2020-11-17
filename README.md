@@ -1,6 +1,15 @@
 # Deep Reinforcement Learning:
 ### Implementation of Deep Reinforcement learning Algorithm like DDQN, policy gradient, actor critic
+[![PackageVersion][pypi-version]][pypi-home]
+[![PythonVersion][python-version]][python-home]
+[![License][pypi-license]](LICENSE)
 
+[pypi-version]: https://badge.fury.io/py/gym-super-mario-bros.svg
+[pypi-license]: https://img.shields.io/pypi/l/gym-super-mario-bros.svg
+[pypi-home]: https://badge.fury.io/py/gym-super-mario-bros
+[python-version]: https://img.shields.io/pypi/pyversions/gym-super-mario-bros.svg
+[python-home]: https://python.org
+    
 ## Abstract
 Reinforcement learning is the family of learning algorithms in which an agent learns from its environment by interacting with it. What does it learn? Informally, an agent learns to take actions that bring it from its current state to the best (optimal) reachable state.
 
