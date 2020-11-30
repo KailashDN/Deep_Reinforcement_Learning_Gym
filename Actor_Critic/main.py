@@ -45,3 +45,8 @@ def create_environment():
 
     return tmp_env
 
+def plot_reward_history(reward_history, mean_reward_history):
+    plt.plot(reward_history, "b-", mean_reward_history, "r-")
+    plt.ylabel("Rewards")
+    plt.xlabel("Episodes")
+    plt.show()
