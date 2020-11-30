@@ -58,3 +58,26 @@ def lazy_frame_to_tensor(lazy_frame):
     return torch.from_numpy(
         np.expand_dims(np.asarray(lazy_frame).astype(np.float64).transpose((2, 1, 0)), axis=0)).float()
 
+
+def record_one_episode(agent, episode):
+    tmp_env = gym_super_mario_bros.make(LEVEL_NAME)
+    tmp_env = JoypadSpace(tmp_env, ACTION_SPACE)
+    tmp_env = Monitor(tmp_env, './videos/video-episode-{0:05d}'.format(episode), force=True)
+    tmp_env = wrapper(tmp_env, FRAME_DIM, FRAME_SKIP)
+
+    state = lazy_frame_to_tensor(tmp_env.reset())
+
+    total_reward = 0
+    while True:
+        action = agent.get_action(state)
+
+        next_state, reward, done, info = tmp_env.step(action)
+        next_state = lazy_frame_to_tensor(next_state)
+
+        if done:
+            break
+
+        total_reward += reward
+
+        state = next_state
+
