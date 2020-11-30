@@ -12,8 +12,8 @@ from wrappers import wrapper
 from Actor_Critic.agent import TwoNetAgent, TwoHeadAgent
 
 WORLD = 1
-STAGE = 2
-LEVEL_NAME = "SuperMarioBros-{1}-{1}-v1".format(WORLD, STAGE)
+STAGE = 1
+LEVEL_NAME = "SuperMarioBros-{}-{}-v1".format(WORLD, STAGE)
 ACTION_SPACE = COMPLEX_MOVEMENT
 FRAME_DIM = (84, 84, 4)
 FRAME_SKIP = 4
@@ -28,10 +28,11 @@ RENDER_GAME = True
 PLOT_INTERVAL = 50
 VIDEO_INTERVAL = 1
 CHECKPOINT_INTERVAL = 100
-#MODEL_PATH = "./models/actor_critic_two_head_world1-1"
-ACTOR_MODEL_PATH = "./models/actor_model_world1-2"
-CRITIC_MODEL_PATH = "./models/critic_model_world1-2"
-LOAD_MODEL = True
+# MODEL_PATH = "C:\Users\kaila\OneDrive\Desktop\Reinforcement Learning\Deep_Reinforcement_Learning_Gym\Actor_Critic\saved_models"
+ACTOR_MODEL_PATH = "./saved_models/actor_model_world1-1"
+CRITIC_MODEL_PATH = "./saved_models/critic_model_world1-1"
+# load saved model
+LOAD_MODEL = False
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 if torch.cuda.is_available():
     print(f"Available GPU: {torch.cuda.get_device_name(0)}")
@@ -78,9 +79,10 @@ def record_one_episode(agent, episode):
             break
 
         total_reward += reward
-
         state = next_state
 
+
+"""" Running mario"""
 env = create_environment()
 # set all options for reproducability
 env.seed(42)
