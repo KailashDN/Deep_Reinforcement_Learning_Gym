@@ -28,4 +28,26 @@ class RewardWrapper(gym.Wrapper):
 
         self.last_status = "small"
 
+    def position_reward(self, x_pos):
+        """
+        Rewards mario for going right and punishes him for going left.
+        :return:    The reward value
+        """
+        reward = x_pos - self.last_x_pos
+
+        if x_pos < self.max_x_pos:
+            return 0
+
+        self.max_x_pos = x_pos
+
+        # reduce negative reward and clip the reward to max 5
+        if reward < 0:
+            reward = 0
+        elif reward > 1:
+            reward = 1
+
+        self.last_x_pos = x_pos
+
+        return reward
+
 
