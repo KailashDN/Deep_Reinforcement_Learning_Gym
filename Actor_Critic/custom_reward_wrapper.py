@@ -50,4 +50,16 @@ class RewardWrapper(gym.Wrapper):
 
         return reward
 
+    def time_penalty(self, time):
+        """
+        Punishes mario for doing nothing.
+        :param time: The currently remaining time
+        :return:    The negative reward value
+        """
+        reward = time - self.last_time_value
+
+        self.last_time_value = time
+
+        return reward
+
 
