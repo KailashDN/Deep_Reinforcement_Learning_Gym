@@ -1,0 +1,17 @@
+from torch import nn
+from torch.functional import F
+
+# parameters for the convolutional net
+FIRST_LAYER_OUT = 32
+FIRST_LAYER_KERNEL_SIZE = 8
+FIRST_LAYER_STRIDE = 4
+
+SECOND_LAYER_OUT = 64
+SECOND_LAYER_KERNEL_SIZE = 4
+SECOND_LAYER_STRIDE = 2
+
+THIRD_LAYER_OUT = 64
+THIRD_LAYER_KERNEL_SIZE = 3
+THIRD_LAYER_STRIDE = 1
+
+FC_LAYER = 1024
