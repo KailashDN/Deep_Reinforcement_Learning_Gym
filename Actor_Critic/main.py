@@ -81,3 +81,76 @@ def record_one_episode(agent, episode):
 
         state = next_state
 
+env = create_environment()
+# set all options for reproducability
+env.seed(42)
+torch.manual_seed(42)
+torch.cuda.manual_seed(42)
+torch.backends.cudnn.deterministic = True
+torch.backends.cudnn.benchmark = False
+
+agent = TwoNetAgent(frame_dim=FRAME_DIM, action_space_size=env.action_space.n, lr_actor=ACTOR_LEARNING_RATE,
+                    lr_critic=CRITIC_LEARNING_RATE, gamma=GAMMA, entropy_scaling=ENTROPY_SCALING,
+                    device=DEVICE)
+if LOAD_MODEL:
+    agent.load_model(actor_model_path=ACTOR_MODEL_PATH, critic_model_path=CRITIC_MODEL_PATH)
+
+# record_one_episode(agent, 1)
+
+reward_history = []
+mean_reward_history = [0]
+for episode in range(1, NUM_EPISODES):
+
+    # reset the environment before a new episode
+    state = env.reset()
+    state = lazy_frame_to_tensor(state)
+
+    trajectory = []
+    total_episode_reward = 0
+    total_episode_score = 0
+    for step in count(1):
+        # get the next action
+        action = agent.get_action(state)
+        # preform the action
+        next_state, reward, done, info = env.step(action)
+        next_state = lazy_frame_to_tensor(next_state)
+
+        # add the score to the reward. 4 reward for 100 points
+        score_delta = (info["score"] - total_episode_score)
+        total_episode_score += score_delta
+        reward += (score_delta / 5)
+
+        # add the transition to the trajectory
+        trajectory.append([state, action, reward, done])
+
+        # keep track of the total reward
+        total_episode_reward += reward
+
+        if done:
+            if info["flag_get"]:
+                print("Finished Level")
+            reward_history.append(total_episode_reward)
+            if episode > 200:
+                mean_reward_history.append(np.mean(reward_history[-200:]))
+            break
+
+        if RENDER_GAME:
+            env.render()
+
+        del state
+        state = next_state
+
+    # update the model using the trajectory
+    actor_loss, critic_loss = agent.update(trajectory)
+
+    print("Episode: {}\t Reward: {:.2f}\t AverageReward: {:.2f}\t Actor Loss: {:.5f}\t Critic Loss: {:.5f}".format(
+        episode, total_episode_reward, mean_reward_history[-1], actor_loss, critic_loss))
+
+    if episode % PLOT_INTERVAL == 0:
+        plot_reward_history(reward_history, mean_reward_history)
+    if episode % VIDEO_INTERVAL == 0:
+        record_one_episode(agent, episode)
+    if episode % CHECKPOINT_INTERVAL == 0:
+        agent.save_model(actor_model_path=ACTOR_MODEL_PATH, critic_model_path=CRITIC_MODEL_PATH)
+
+env.close()
