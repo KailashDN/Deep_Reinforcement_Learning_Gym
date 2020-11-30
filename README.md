@@ -70,6 +70,7 @@ Super Mario game trained on GTX 1050Ti using TensorFlow 1.5.2(TF2.x Multi GPU pa
 ## Citations
 - https://console.paperspace.com/gcn-team/notebook/pr5ddt1g9
 - https://github.com/p-christ/Deep-Reinforcement-Learning-Algorithms-with-PyTorch
+- https://github.com/sweetice/Deep-reinforcement-learning-with-pytorch
 - https://www.statworx.com/de/blog/using-reinforcement-learning-to-play-super-mario-bros-on-nes-using-tensorflow/
 - https://mc.ai/introduction-to-double-deep-q-learning-ddqn/
 - https://stats.stackexchange.com/questions/326788/when-to-choose-sarsa-vs-q-learning
