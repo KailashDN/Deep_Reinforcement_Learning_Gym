@@ -132,5 +132,3 @@ class RewardWrapper(gym.Wrapper):
         self.last_status == "small"
 
         return self.env.reset()
-
-
