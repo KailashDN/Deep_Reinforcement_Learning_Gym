@@ -9,7 +9,7 @@ from gym_super_mario_bros.actions import SIMPLE_MOVEMENT, COMPLEX_MOVEMENT, RIGH
 from nes_py.wrappers import JoypadSpace
 
 from wrappers import wrapper
-from actor_critic.agent import TwoNetAgent, TwoHeadAgent
+from Actor_Critic.agent import TwoNetAgent, TwoHeadAgent
 
 WORLD = 1
 STAGE = 2
