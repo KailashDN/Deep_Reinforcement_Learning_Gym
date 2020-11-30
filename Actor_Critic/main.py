@@ -36,3 +36,12 @@ DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 if torch.cuda.is_available():
     print(f"Available GPU: {torch.cuda.get_device_name(0)}")
 
+
+def create_environment():
+    """Creates the environment, applies some wrappers and returns it."""
+    tmp_env = gym_super_mario_bros.make(LEVEL_NAME)
+    tmp_env = JoypadSpace(tmp_env, ACTION_SPACE)
+    tmp_env = wrapper(tmp_env, FRAME_DIM, FRAME_SKIP)
+
+    return tmp_env
+
