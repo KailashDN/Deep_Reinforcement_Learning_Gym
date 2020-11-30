@@ -45,8 +45,16 @@ def create_environment():
 
     return tmp_env
 
+
 def plot_reward_history(reward_history, mean_reward_history):
     plt.plot(reward_history, "b-", mean_reward_history, "r-")
     plt.ylabel("Rewards")
     plt.xlabel("Episodes")
     plt.show()
+
+
+def lazy_frame_to_tensor(lazy_frame):
+    # pytorch expects the frames as height x width x depth
+    return torch.from_numpy(
+        np.expand_dims(np.asarray(lazy_frame).astype(np.float64).transpose((2, 1, 0)), axis=0)).float()
+
