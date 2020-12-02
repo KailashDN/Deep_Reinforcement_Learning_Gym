@@ -29,3 +29,8 @@ class Policy(nn.Module):
         self.conv3 = nn.Conv2d(in_channels=SECOND_LAYER_OUT, out_channels=THIRD_LAYER_OUT,
                                kernel_size=THIRD_LAYER_KERNEL_SIZE, stride=THIRD_LAYER_STRIDE)
         self.conv3_bn = nn.BatchNorm2d(THIRD_LAYER_OUT)
+
+    def conv2d_size_out(size, kernel_size, stride):
+        return (size - (kernel_size - 1) - 1) // stride + 1
+
+
