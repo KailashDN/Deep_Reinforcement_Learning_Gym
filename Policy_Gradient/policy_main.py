@@ -33,3 +33,8 @@ GAMMA = 0.99
 LOG_INTERVAL = 1
 PLOT_INTERVAL = 10
 VIDEO_INTERVAL = 50
+
+DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+if torch.cuda.is_available():
+    print(f"Available GPU: {torch.cuda.get_device_name(0)}")
+
