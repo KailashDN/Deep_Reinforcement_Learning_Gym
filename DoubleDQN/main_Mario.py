@@ -15,7 +15,7 @@ from wrappers import wrapper
 FRAME_DIM = (84, 84, 4)
 ACTION_SPACE = RIGHT_ONLY   # We can also use other action space COMPLEX_MOVEMENT( for left, right, up and down actions)
 REPLAY_MEMORY_CAPACITY = 100_000
-NUM_EPISODES = 10_000
+NUM_EPISODES = 1001
 MAX_STEPS_PER_GAME = 1000
 GAMMA = 0.99
 RENDER_ENVIRONMENT = True
