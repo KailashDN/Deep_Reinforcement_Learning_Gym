@@ -27,16 +27,17 @@ MODEL_PATH = ""  # to create a new model set it to ""
 # training hyperparameters
 TRAIN_MODEL = True
 LEARNING_RATE = 0.000007
-NUM_EPOCHS = 1_000
+NUM_EPOCHS = 1_001
 GAMMA = 0.99
 
 LOG_INTERVAL = 1
-PLOT_INTERVAL = 10
-VIDEO_INTERVAL = 50
+PLOT_INTERVAL = 100
+VIDEO_INTERVAL = 100
 
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 if torch.cuda.is_available():
     print(f"Available GPU: {torch.cuda.get_device_name(0)}")
+
 
 def create_environment():
     """Creates the environment, applies some wrappers and returns it."""
@@ -54,16 +55,17 @@ def lazy_frame_to_tensor(lazy_frame):
 
 
 def plot_rewards(reward_list, reward_mean_history):
+    plt.figure(figsize=(12,6))
     plt.plot(reward_list, "b-", reward_mean_history, "r-")
     plt.ylabel("Rewards")
     plt.xlabel("Episodes")
     plt.show()
 
 
-def record_one_episode(agent):
+def record_one_episode(agent, episode):
     tmp_env = gym_super_mario_bros.make(LEVEL_NAME)
     tmp_env = JoypadSpace(tmp_env, ACTION_SPACE)
-    tmp_env = Monitor(tmp_env, './video', force=True)
+    tmp_env = Monitor(tmp_env, './video/video-episode-{0:05d}'.format(episode), force=True)
     tmp_env = wrapper(tmp_env, FRAME_DIM)
 
     state = lazy_frame_to_tensor(tmp_env.reset())
@@ -99,7 +101,7 @@ step_reward_history = []
 
 # save one example warped image for preview
 state = env.reset()
-cv2.imwrite("exampleWarpedImage.jpg", np.asarray(state))
+cv2.imwrite("exampleImage.jpg", np.asarray(state))
 
 for episode in range(1, NUM_EPOCHS):
     torch.cuda.memory_summary(device=None, abbreviated=False)
@@ -150,8 +152,9 @@ for episode in range(1, NUM_EPOCHS):
                                                                                              loss))
     if episode % PLOT_INTERVAL == 0:
         plot_rewards(reward_history, reward_mean_history)
-    if episode % VIDEO_INTERVAL == 0:
-        record_one_episode(agent)
+    # if episode % VIDEO_INTERVAL == 0:
+    if last_reward >= 1400:
+        record_one_episode(agent, episode)
 
     del loss
     del step_reward_history[:]
