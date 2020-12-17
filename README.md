@@ -45,16 +45,22 @@ Here I am implementing following algorithm using Super Mario Bros Gym Environmen
 
 ## Getting Started
 1. Clone this repo (for help see this [tutorial](https://help.github.com/articles/cloning-a-repository/)).
-2. Since I am doing this project solely to learn I have implemented it with both Tensorflow and Pytorch:
+2. Since I am doing this project solely to learn I have implemented it with both `Tensorflow 1.5.2` and `Pytorch`:
 3. Since there are two different framework I have created two python environemtn and created `.yml` file, clone of my both environment for easier project setup.
 4. The Environment link:
     - [DDQN: Tensorflow 1.15](https://github.com/KailashDN/Deep_Reinforcement_Learning_Gym/blob/main/DoubleDQN/RL_GPU_TF15.yml)
     - [Policy Gradient/Actor-Critic: PyTorch](https://github.com/KailashDN/Deep_Reinforcement_Learning_Gym/blob/main/Actor_Critic/RL_GPU_TORCH.yml)
 5. Command to copy Conda envs: [How to create conda environment](https://uoa-eresearch.github.io/eresearch-cookbook/recipe/2014/11/20/conda/)
     - `conda create -n new_env -f=\path\to\RL_GPU_TORCH.yml` 
-        OR
+        <br />OR
     - `conda create --name new_env --file \path\to\RL_GPU_TORCH.yml` 
-6. 
+## How to Run:
+### 1. PyCharm [Install Guid](https://www.jetbrains.com/help/pycharm/installation-guide.html):
+1. Clone and open project in pycharm
+2. Check Available [GPU](https://github.com/KailashDN/Deep_Reinforcement_Learning_Gym/blob/main/check_available_gpu.py)
+3. Each Reinforcement Learning method has saperate folder where you can find and run the main file.
+### 2. Jupyter:
+1. Each Reinforcement Learning method has Jupyter Notebook for better understanding of project pipeline
 
 ## Results:
 Super Mario game trained on GTX 1050Ti using TensorFlow 1.5.2(TF2.x Multi GPU parallel version coming soon!!)
