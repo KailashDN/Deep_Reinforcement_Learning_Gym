@@ -21,8 +21,9 @@ LEVEL_NAME = "SuperMarioBros-{}-{}-v0".format(WORLD, STAGE)
 FRAME_DIM = (84, 84, 4)     # (120, 128, 4)  # original image size is 240x256
 ACTION_SPACE = SIMPLE_MOVEMENT
 RENDER_GAME = True
-
-MODEL_PATH = ""  # to create a new model set it to ""
+LOAD_MODEL = False
+CHECKPOINT_INTERVAL = 10
+MODEL_PATH = "./saved_models/policy_gradient_model_world1-1"  # to create a new model set it to ""
 
 # training hyperparameters
 TRAIN_MODEL = True
@@ -65,7 +66,7 @@ def plot_rewards(reward_list, reward_mean_history):
 def record_one_episode(agent, episode):
     tmp_env = gym_super_mario_bros.make(LEVEL_NAME)
     tmp_env = JoypadSpace(tmp_env, ACTION_SPACE)
-    tmp_env = Monitor(tmp_env, './video/video-episode-{0:05d}'.format(episode), force=True)
+    tmp_env = Monitor(tmp_env, './training_videos/video-episode-{0:05d}'.format(episode), force=True)
     tmp_env = wrapper(tmp_env, FRAME_DIM)
 
     state = lazy_frame_to_tensor(tmp_env.reset())
@@ -88,6 +89,8 @@ def record_one_episode(agent, episode):
 env = create_environment()
 
 agent = Agent(env.action_space.n, FRAME_DIM, LEARNING_RATE, GAMMA, DEVICE, MODEL_PATH)
+if LOAD_MODEL:
+    agent.load_model(model_path=MODEL_PATH)
 
 if not TRAIN_MODEL:
     record_one_episode(agent)
@@ -155,6 +158,8 @@ for episode in range(1, NUM_EPOCHS):
     # if episode % VIDEO_INTERVAL == 0:
     if last_reward >= 1400:
         record_one_episode(agent, episode)
+    if episode % CHECKPOINT_INTERVAL == 0:
+        agent.save_model(model_path=MODEL_PATH)
 
     del loss
     del step_reward_history[:]
