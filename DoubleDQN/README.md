@@ -1,19 +1,7 @@
-# Deep Reinforcement Learning:
-### Implementation of Deep Reinforcement learning Algorithm like DDQN, policy gradient, actor-critic
-
-[![PackageVersion][pypi-version]][pypi-home]
-[![PythonVersion][python-version]][python-home]
-[![License][pypi-license]](LICENSE)
-
-[pypi-version]: https://badge.fury.io/py/gym-super-mario-bros.svg
-[pypi-home]: https://badge.fury.io/py/gym-super-mario-bros
-[python-version]: https://img.shields.io/pypi/pyversions/gym-super-mario-bros.svg
-[python-home]: https://python.org
-[pypi-license]: https://img.shields.io/pypi/l/gym-super-mario-bros.svg
+# Deep Double Q-Learning:
+### Implementation of Deep Reinforcement learning Algorithm: DDQN
     
 ## Abstract
-Reinforcement learning is the family of learning algorithms in which an agent learns from its environment by interacting with it. What does it learn? Informally, an agent learns to take actions that bring it from its current state to the best (optimal) reachable state.
-
 In reinforcement learning, we often use a learning concept called Q-learning. Q-learning is based on so-called Q-values, that help the agent determining the optimal action, given the current state of the environment. Q-values are „discounted“ future rewards, that our agent collects during training by taking actions and moving through the different states of the environment. Q-values themselves are tried to be approximated during training, either by a simple exploration of the environment or by using a function approximator, such as a deep neural network (as in our case here). Mostly, we select in each state the action that has the highest Q-value, i.e. the highest discounted future reward, given the current state of the environment.
 
 ![DQN](/Images/DQN.png)
@@ -66,17 +54,8 @@ Steps:
 ## Results:
 Super Mario game trained on GTX 1050Ti using TensorFlow 1.5.2(TF2.x Multi GPU parallel version coming soon!!)
 ![Training](/Images/Mario_Training.png)![Training](/Images/Mario_Training1.png)![Training](/Images/Mario_Training2.png)
+![](https://github.com/KailashDN/Deep_Reinforcement_Learning_Gym/blob/main/Images/DDQN_train.gif)
+![](https://github.com/KailashDN/Deep_Reinforcement_Learning_Gym/blob/main/Images/DDQN_reward.png)
 
-## Citations
-- https://console.paperspace.com/gcn-team/notebook/pr5ddt1g9
-- https://github.com/p-christ/Deep-Reinforcement-Learning-Algorithms-with-PyTorch
-- https://github.com/sweetice/Deep-reinforcement-learning-with-pytorch
-- https://www.statworx.com/de/blog/using-reinforcement-learning-to-play-super-mario-bros-on-nes-using-tensorflow/
-- https://mc.ai/introduction-to-double-deep-q-learning-ddqn/
-- https://stats.stackexchange.com/questions/326788/when-to-choose-sarsa-vs-q-learning
-- https://www.cse.unsw.edu.au/~cs9417ml/RL1/algorithms.html
-
-## License
-[MIT License](/LICENSE)
 
 
