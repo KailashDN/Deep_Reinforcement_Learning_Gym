@@ -18,14 +18,21 @@ Reinforcement learning is the family of learning algorithms in which an agent le
 [Image credit:!(https://mc.ai/introduction-to-double-deep-q-learning-ddqn/)]
 
 Reinforcement Learning has four essential elements:
-1. Agent: The program you train, with the aim of doing a job you specify.
-2. Environment: The world, real or virtual, in which the agent performs actions.
-3. Action: A move made by the agent, which causes a status change in the environment.
-4. Rewards: The evaluation of an action, which can be positive or negative.
+1. `Agent`: The program you train, with the aim of doing a job you specify.
+2. `Environment`: The world, real or virtual, in which the agent performs actions.
+3. `Action`: A move made by the agent, which causes a status change in the environment.
+4. `Rewards`: The evaluation of an action, which can be positive or negative.
 
-In Double Deep Q Learning, the agent uses two neural networks to learn and predict what action to take at every step. One network, referred to as the Q network or the online network, is used to predict what to do when the agent encounters a new state. It takes in the state as input and outputs Q values for the possible actions that could be taken. 
+## Methods Used: OpenAI Gym
+OpenAI Gym is a toolkit for developing and comparing reinforcement learning algorithms. It supports teaching agents in everything from walking to playing games like Pong or Pinball.
+OpenAI Gym gives us game environments in which our programs can take actions. Each environment has an initial status. After your agent takes an action, the status is updated.
+When your agent observes the change, it uses the new status together with its policy to decide what move to make next. The policy is key: it is the essential element for your program to keep working on. The better the policy your agent learns, the better the performance you get out of it.
 
-## Implementation:
+Here I am implementing following algorithm using Super Mario Bros Gym Environment:
+1. [`DDQN (Deep Double Q learning):`](https://github.com/KailashDN/Deep_Reinforcement_Learning_Gym/tree/main/DoubleDQN)
+2. [`Policy Gradient`:](https://github.com/KailashDN/Deep_Reinforcement_Learning_Gym/tree/main/Policy_Gradient)
+3. [`Actor-Critic`:](https://github.com/KailashDN/Deep_Reinforcement_Learning_Gym/tree/main/Actor_Critic)
+
 ### 1. `DeepQ_Network.py`: 
 Convolutional Neural Network Model to learn and predict what action to take. Our model architecture is the same as in the deep mind atari paper "Playing Atari with Deep        Reinforcement Learning" It takes two inputs:
 #### 
