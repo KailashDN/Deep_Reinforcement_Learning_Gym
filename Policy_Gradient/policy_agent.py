@@ -15,8 +15,8 @@ class Agent:
         self.device = device
 
         self.model = Policy(num_actions, frame_dim).to(device)
-        if model_path is not "":
-            self.model.load_state_dict(torch.load(model_path, map_location=self.device))
+        # if model_path is not "":
+        #     self.model.load_state_dict(torch.load(model_path, map_location=self.device))
         self.optimizer = optim.Adam(self.model.parameters(), lr=lr)
 
     def select_action_based_on_state(self, state):
@@ -52,3 +52,9 @@ class Agent:
 
         return policy_loss.cpu().detach().item()
 
+    def save_model(self, model_path):
+        torch.save(self.model.state_dict(), model_path)
+
+    def load_model(self, model_path):
+        self.model.load_state_dict(torch.load(model_path))
+        self.optimizer = optim.Adam(self.model.parameters(), lr=self.lr)
