@@ -44,7 +44,7 @@ Here I am implementing following algorithm using Super Mario Bros Gym Environmen
 - Knack for Data Science
 
 ## Getting Started
-1. Clone this repo (for help see this [tutorial](https://help.github.com/articles/cloning-a-repository/)).
+1. Clone this [repo](https://github.com/KailashDN/Deep_Reinforcement_Learning_Gym.git) (for help see this [tutorial](https://help.github.com/articles/cloning-a-repository/)).
 2. Since I am doing this project solely to learn I have implemented it with both `Tensorflow 1.5.2` and `Pytorch`:
 3. Since there are two different framework I have created two python environemtn and created `.yml` file, clone of my both environment for easier project setup.
 4. The Environment link:
@@ -63,8 +63,16 @@ Here I am implementing following algorithm using Super Mario Bros Gym Environmen
 1. Each Reinforcement Learning method has Jupyter Notebook for better understanding of project pipeline
 
 ## Results:
-Super Mario game trained on GTX 1050Ti using TensorFlow 1.5.2(TF2.x Multi GPU parallel version coming soon!!)
-![Training](/Images/Mario_Training.png)![Training](/Images/Mario_Training1.png)![Training](/Images/Mario_Training2.png)
+Super Mario game trained on GTX 1050Ti using TensorFlow 1.5.2(TF2.x Multi GPU parallel version coming soon!!) and Pytorch.
+CUDA Version: 10.2
+<!-- ![Training](/Images/Mario_Training.png)![Training](/Images/Mario_Training1.png)![Training](/Images/Mario_Training2.png)-->
+|Algorithm Name     |  Training Video  |  Training Plot |
+|---------|-----------------|
+|Name     |  Slack Handle   | 
+|---------|-----------------|
+| DDQN      | !(https://github.com/KailashDN/Deep_Reinforcement_Learning_Gym/blob/main/Images/DDQN_train.gif)|
+| Actor-Critic | () |
+| Policy Gradient | () |
 
 ## Citations
 - https://console.paperspace.com/gcn-team/notebook/pr5ddt1g9
