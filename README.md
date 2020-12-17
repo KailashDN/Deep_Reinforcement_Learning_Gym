@@ -67,12 +67,10 @@ Super Mario game trained on GTX 1050Ti using TensorFlow 1.5.2(TF2.x Multi GPU pa
 CUDA Version: 10.2
 <!-- ![Training](/Images/Mario_Training.png)![Training](/Images/Mario_Training1.png)![Training](/Images/Mario_Training2.png)-->
 |Algorithm Name     |  Training Video  |  Training Plot |
-|---------|-----------------|
-|Name     |  Slack Handle   | 
-|---------|-----------------|
-| DDQN      | !(https://github.com/KailashDN/Deep_Reinforcement_Learning_Gym/blob/main/Images/DDQN_train.gif)|
-| Actor-Critic | () |
-| Policy Gradient | () |
+|---------|-----------------|-----------------------------------|
+| DDQN      | ![](https://github.com/KailashDN/Deep_Reinforcement_Learning_Gym/blob/main/Images/DDQN_train.gif)| ![](https://github.com/KailashDN/Deep_Reinforcement_Learning_Gym/blob/main/Images/DDQN_reward.png) |
+| Actor-Critic | ![](https://github.com/KailashDN/Deep_Reinforcement_Learning_Gym/blob/main/Images/Actor_critic_train.gif) |![] (https://github.com/KailashDN/Deep_Reinforcement_Learning_Gym/blob/main/Images/Actor_critic_rewards.png)|
+| Policy Gradient | ![](https://github.com/KailashDN/Deep_Reinforcement_Learning_Gym/blob/main/Images/policy_gradient_train.gif) | ![](https://github.com/KailashDN/Deep_Reinforcement_Learning_Gym/blob/main/Images/DDQN_reward.png) |
 
 ## Citations
 - https://console.paperspace.com/gcn-team/notebook/pr5ddt1g9
