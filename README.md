@@ -1,5 +1,5 @@
 # Deep Reinforcement Learning:
-### Implementation of Deep Reinforcement learning Algorithm like DDQN, policy gradient, actor-critic
+### The purpose of the project is to implement and create documentation for Deep Reinforcement learning Algorithm like DDQN, policy gradient, actor-critic 
 
 [![PackageVersion][pypi-version]][pypi-home]
 [![PythonVersion][python-version]][python-home]
@@ -14,10 +14,14 @@
 ## Abstract
 Reinforcement learning is the family of learning algorithms in which an agent learns from its environment by interacting with it. What does it learn? Informally, an agent learns to take actions that bring it from its current state to the best (optimal) reachable state.
 
-In reinforcement learning, we often use a learning concept called Q-learning. Q-learning is based on so-called Q-values, that help the agent determining the optimal action, given the current state of the environment. Q-values are „discounted“ future rewards, that our agent collects during training by taking actions and moving through the different states of the environment. Q-values themselves are tried to be approximated during training, either by a simple exploration of the environment or by using a function approximator, such as a deep neural network (as in our case here). Mostly, we select in each state the action that has the highest Q-value, i.e. the highest discounted future reward, given the current state of the environment.
-
-![DQN](/Images/DQN.png)
+![DQN](/Images/RL_arch.png)
 [Image credit:!(https://mc.ai/introduction-to-double-deep-q-learning-ddqn/)]
+
+Reinforcement Learning has four essential elements:
+1. Agent: The program you train, with the aim of doing a job you specify.
+2. Environment: The world, real or virtual, in which the agent performs actions.
+3. Action: A move made by the agent, which causes a status change in the environment.
+4. Rewards: The evaluation of an action, which can be positive or negative.
 
 In Double Deep Q Learning, the agent uses two neural networks to learn and predict what action to take at every step. One network, referred to as the Q network or the online network, is used to predict what to do when the agent encounters a new state. It takes in the state as input and outputs Q values for the possible actions that could be taken. 
 
