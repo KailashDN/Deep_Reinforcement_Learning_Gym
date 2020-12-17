@@ -69,7 +69,7 @@ CUDA Version: 10.2
 |Algorithm Name     |  Training Video  |  Training Plot |
 |---------|-----------------|-----------------------------------|
 | DDQN      | ![](https://github.com/KailashDN/Deep_Reinforcement_Learning_Gym/blob/main/Images/DDQN_train.gif)| ![](https://github.com/KailashDN/Deep_Reinforcement_Learning_Gym/blob/main/Images/DDQN_reward.png) |
-| Actor-Critic | ![](https://github.com/KailashDN/Deep_Reinforcement_Learning_Gym/blob/main/Images/Actor_critic_train.gif) | ![](https://github.com/KailashDN/Deep_Reinforcement_Learning_Gym/blob/main/Images/Actor_Critic_rewards.png)|
+| Actor-Critic | ![](https://github.com/KailashDN/Deep_Reinforcement_Learning_Gym/blob/main/Images/Actor_critic_train.gif) | ![](https://github.com/KailashDN/Deep_Reinforcement_Learning_Gym/blob/main/Images/Actor_Critic_reward.png) |
 | Policy Gradient | ![](https://github.com/KailashDN/Deep_Reinforcement_Learning_Gym/blob/main/Images/policy_gradient_train.gif) | ![](https://github.com/KailashDN/Deep_Reinforcement_Learning_Gym/blob/main/Images/DDQN_reward.png) |
 
 ## Citations
