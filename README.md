@@ -35,13 +35,21 @@ Here I am implementing following algorithm using Super Mario Bros Gym Environmen
 
 ## Needs of this project:
 #### The project need good understanding of:
-    - Deep Learning, 
-    - Probability Distributions, 
-    - Basic Reinforcement Learning,
-    - Python 3
-    - Pycharm
-    - Jupyter Notebook 
-    - Knack for Data Science
+- Deep Learning, 
+- Probability Distributions, 
+- Basic Reinforcement Learning,
+- Python 3
+- Pycharm
+- Jupyter Notebook and 
+- Knack for Data Science
+
+## Getting Started
+1. Clone this repo (for help see this [tutorial](https://help.github.com/articles/cloning-a-repository/)).
+2. Since I am doing this project solely to learn meaning I have implemented it with both Tensorflow and Pytorch:
+3. Since there are two different framework I have created two python environemtn and created `.yml` file, clone of my both environment.
+4. The Environment link:
+    - [DDQN: Tensorflow 1.15](https://github.com/KailashDN/Deep_Reinforcement_Learning_Gym/blob/main/DoubleDQN/RL_GPU_TF15.yml)
+    - [Policy Gradient/Actor-Critic: PyTorch](https://github.com/KailashDN/Deep_Reinforcement_Learning_Gym/blob/main/Actor_Critic/RL_GPU_TORCH.yml)
 
 ## Results:
 Super Mario game trained on GTX 1050Ti using TensorFlow 1.5.2(TF2.x Multi GPU parallel version coming soon!!)
