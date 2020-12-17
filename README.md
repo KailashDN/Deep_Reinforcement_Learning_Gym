@@ -14,7 +14,7 @@
 ## Abstract
 Reinforcement learning is the family of learning algorithms in which an agent learns from its environment by interacting with it. What does it learn? Informally, an agent learns to take actions that bring it from its current state to the best (optimal) reachable state.
 
-![DQN](/Images/RL_arch.png)
+![Reinforcement Learning](/Images/RL_arch.png)
 [Image credit](https://mc.ai/introduction-to-double-deep-q-learning-ddqn/)
 
 Reinforcement Learning has four essential elements:
