@@ -9,6 +9,8 @@ Actor-critic methods are Temporal difference(TD) methods that have a separate me
 ![ActorCritic](/Images/Actor_Critic.png)
 [Image credit](https://theaisummer.com/assets/img/posts/Actor_critics/ac.jpg)
 
+## How to run:
+python3 main.py
 
 ## Implementation: 
 ### Here I have explained some important code and working
@@ -70,9 +72,9 @@ Steps:
 ## Results:
 Super Mario game trained on GTX 1050Ti using Pytorch GPU
 
-![](/Images/Actor_Critic_reward.png)
+![](/Images/Actor_Critic_reward.png) | ![](/Images//Actor_critic_train.gif)
 
-![](/Images//Actor_critic_train.gif)
+
 
 
 
