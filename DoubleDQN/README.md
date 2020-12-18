@@ -16,7 +16,10 @@ In deep Q-learning, we use a neural network to approximate the Q-value function.
 #### Steps:
     1. All the past experience is stored by the user in memory
     2. The next action is determined by the maximum output of the Q-network
-    3. The loss function here is mean squared error of the predicted Q-value and the target Q-value – Q*. This is basically a regression problem. However, we do not know the target or actual value here as we are dealing with a reinforcement learning problem. Going back to the Q-value update equation derived fromthe Bellman equation. 
+    3. The loss function here is mean squared error of the predicted Q-value and the target Q-value – Q*. 
+        This is basically a regression problem. However, we do not know the target or actual value here 
+        as we are dealing with a reinforcement learning problem. 
+    4. Going back to the Q-value update equation derived fromthe Bellman equation. 
 
 ## How to run:
 python3 main_Mario.py
