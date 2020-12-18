@@ -7,7 +7,7 @@ The objective of a Reinforcement Learning agent is to maximize the "expected" re
 Like any Machine Learning setup, we define a set of parameters *θ* (e.g. the coefficients of a complex polynomial or the weights and biases of units in a neural network) to parametrize this policy — *π_θ* (also written a π for brevity).<br />
 If we represent the total reward for a given trajectory *τ* as *r(τ)*, we arrive at the following definition.
 Reinforcement Learning Objective: Maximize the “expected” reward following a parametrized policy: <br />
-                            **_J(θ)=Eπ​[r(τ)]_**
+                            \t\t**_J(θ)=Eπ​[r(τ)]_**
 
 
 
