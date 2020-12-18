@@ -72,7 +72,7 @@ Super Mario game trained on GTX 1050Ti using Pytorch GPU
 
 ![](/Images/Actor_Critic_reward.png)
 
-![](https://github.com/KailashDN/Deep_Reinforcement_Learning_Gym/blob/main/Images/DDQN_train.gif)
+![](/Images//Actor_critic_train.gif)
 
 
 
