@@ -14,10 +14,10 @@ If we represent the total reward for a given trajectory *τ* as *r(τ)*, we arri
 [Image credit](https://cdn-images-1.medium.com/max/1600/1*94EI9DpoXnWa6oLHvh14pw.jpeg)
 
 #### In Policy Gradient Reinforcement Learning:<br />
-    Step 1: Observes the state of the environment (_s_).<br />
-    Step 2: Takes action (_u_) based on his instinct (a policy _π_) on the state _s_.<br />
-    Step 3: A new state is formed.<br />
-    Step 4: Takes further actions based on the observed state.<br />
+    Step 1: Observes the state of the environment (_s_).
+    Step 2: Takes action (_u_) based on his instinct (a policy _π_) on the state _s_.
+    Step 3: A new state is formed.
+    Step 4: Takes further actions based on the observed state.
     Step 5: Adjusts actions based on the total rewards _R(τ)_ received.
 
 ## How to run:
