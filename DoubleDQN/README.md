@@ -12,7 +12,14 @@ In reinforcement learning, we often use a learning concept called Q-learning. Q-
 <br />
 [Image credit](https://www.novatec-gmbh.de/wp-content/uploads/reinforcement_learning_loop-650x294.png)
 
-In Double Deep Q Learning, the agent uses two neural networks to learn and predict what action to take at every step. One network, referred to as the Q network or the online network, is used to predict what to do when the agent encounters a new state. It takes in the state as input and outputs Q values for the possible actions that could be taken. 
+In deep Q-learning, we use a neural network to approximate the Q-value function. The state is given as the input and the Q-value of all possible actions is generated as the output. 
+#### Steps:
+    1. All the past experience is stored by the user in memory
+    2. The next action is determined by the maximum output of the Q-network
+    3. The loss function here is mean squared error of the predicted Q-value and the target Q-value – Q*. 
+        This is basically a regression problem. However, we do not know the target or actual value here 
+        as we are dealing with a reinforcement learning problem. 
+    4. Going back to the Q-value update equation derived fromthe Bellman equation. 
 
 ## How to run:
 python3 main_Mario.py
