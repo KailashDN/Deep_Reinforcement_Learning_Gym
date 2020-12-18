@@ -72,6 +72,9 @@ CUDA Version: 10.2
 | Actor-Critic | ![](https://github.com/KailashDN/Deep_Reinforcement_Learning_Gym/blob/main/Images/Actor_critic_train.gif) | ![](https://github.com/KailashDN/Deep_Reinforcement_Learning_Gym/blob/main/Images/Actor_Critic_reward.png) |
 | Policy Gradient | ![](https://github.com/KailashDN/Deep_Reinforcement_Learning_Gym/blob/main/Images/policy_gradient_train.gif) | ![](https://github.com/KailashDN/Deep_Reinforcement_Learning_Gym/blob/main/Images/DDQN_reward.png) |
 
+## Future Work:
+Implementation of Asynchronous Advantage Actor-Critic (A3C), synchronous, deterministic A3C (A2C), Deterministic policy gradient (DPG), Twin Delayed Deep Deterministic(TD3)
+
 ## Citations
 - https://console.paperspace.com/gcn-team/notebook/pr5ddt1g9
 - https://github.com/p-christ/Deep-Reinforcement-Learning-Algorithms-with-PyTorch
