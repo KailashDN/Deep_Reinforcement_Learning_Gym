@@ -20,7 +20,7 @@ We have Three Convolutional Neural Network Model to learn and predict what actio
 This 3 Neural network are implemtation of two type:
 1. ActorCriticNet: Two Head Agent
 2. ActorNet: Two Net Agent
-3. CriticNet: Two Net Agent
+3. CriticNet: Two Net Agent <br />
 Each Network class takes two inputs:
 #### 
     1. :param frame_dim: The dimension of the given frames
@@ -50,17 +50,20 @@ Wrappers will allow us to add functionality to environments, such as modifying o
 ### 3. `agent.py`:
 We have Two classes in agent:
 1. **TwoNetAgent**:
-    It uses two saperate CNN model:`
-    - ActorNet
-    - CriticNet
-    - 
-- Select action based on current state of agent
-- Returns the sampled action and the log of the probability density.
-- Here we calculate the probability distribution of the prediction of actions using policy model
-- Once we have probability distribution of action predicted we sample action
-- Return log probability of action
-- We also update log probabilities of actions and reward
-- As name suggested the save_model function save the model and Load_model load the pretrained saved model
+    - It uses two saperate CNN model:`
+        - ActorNet
+        - CriticNet
+    - Train Actor and Critic using saperate model
+    - Compute Actor loss and Critic loss 
+    - Update the **trajectory**(When an agent follows a policy π, it generates the sequence of states, actions and rewards called the trajectory)
+2. **TwoHeadAgent**:
+    - It use one CNN model 
+        - ActorCriticNet
+    - Train Actor and Critic using same model
+    - Compute Actor loss and Critic loss 
+    - Update the **trajectory**
+- Bothe agent have functionality to save and load the model 
+
 
 ### 4. `policy_main.py`:
 #### Run policy_main.py to train super mario. 
