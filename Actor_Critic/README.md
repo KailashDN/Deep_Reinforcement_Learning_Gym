@@ -18,9 +18,9 @@ Actor-critic methods are Temporal difference(TD) methods that have a separate me
 ### 1. `model.py`: 
 We have Three Convolutional Neural Network Model to learn and predict what action to take.<br />
 This 3 Neural network are implemtation of two type:
-1. ActorCriticNet: Two Head Agent
-2. ActorNet: Two Net Agent
-3. CriticNet: Two Net Agent <br />
+1. **ActorCriticNet**: Two Head Agent
+2. **ActorNet**: Two Net Agent
+3. **CriticNet**: Two Net Agent <br />
 Each Network class takes two inputs:
 #### 
     1. :param frame_dim: The dimension of the given frames
