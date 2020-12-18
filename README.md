@@ -7,9 +7,6 @@
 [![PythonVersion](https://img.shields.io/badge/PyTorch-1.5.1(Cuda:10.1)-red.svg)](https://pytorch.org/get-started/previous-versions/)
 [![License][pypi-license]](LICENSE)
 
-[pypi-version]: https://badge.fury.io/py/gym-super-mario-bros.svg
-[pypi-home]: https://badge.fury.io/py/gym-super-mario-bros
-[python-version]: https://img.shields.io/pypi/pyversions/gym-super-mario-bros.svg
 [pypi-license]: https://img.shields.io/pypi/l/gym-super-mario-bros.svg
 
 ## Abstract
