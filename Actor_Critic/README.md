@@ -71,8 +71,11 @@ Steps:
 
 ## Results:
 Super Mario game trained on GTX 1050Ti using Pytorch GPU
+#### Training reward history:
+![](/Images/Actor_Critic_reward.png)
 
-![](/Images/Actor_Critic_reward.png) | ![](/Images//Actor_critic_train.gif)
+#### Training Example([More](/Actor_Critic/videos)):
+![](/Images//Actor_critic_train.gif)
 
 
 
