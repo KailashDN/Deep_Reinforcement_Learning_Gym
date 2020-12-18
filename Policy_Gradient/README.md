@@ -7,13 +7,18 @@ The objective of a Reinforcement Learning agent is to maximize the "expected" re
 Like any Machine Learning setup, we define a set of parameters *θ* (e.g. the coefficients of a complex polynomial or the weights and biases of units in a neural network) to parametrize this policy — *π_θ* (also written a π for brevity).<br />
 If we represent the total reward for a given trajectory *τ* as *r(τ)*, we arrive at the following definition.
 Reinforcement Learning Objective: Maximize the “expected” reward following a parametrized policy: <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**_J(θ)=Eπ​[r(τ)]_**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**_J(θ)=Eπ​[r(τ)]_**
 
 
 ![DQN](/Images/policy_gradient.png)
 [Image credit](https://cdn-images-1.medium.com/max/1600/1*94EI9DpoXnWa6oLHvh14pw.jpeg)
 
-In Double Deep Q Learning, the agent uses two neural networks to learn and predict what action to take at every step. One network, referred to as the Q network or the online network, is used to predict what to do when the agent encounters a new state. It takes in the state as input and outputs Q values for the possible actions that could be taken. 
+In Policy Gradient Reinforcement Learning:
+Step 1: Observes the state of the environment (_s_).
+Step 2: Takes action (_u_) based on his instinct (a policy _π_) on the state _s_.
+Step 3: A new state is formed.
+Step 4: Takes further actions based on the observed state.
+Step 5: Adjusts actions based on the total rewards _R(τ)_ received.
 
 ## Implementation: 
 ### Here I have explained some important code and working
