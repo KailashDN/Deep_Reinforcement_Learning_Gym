@@ -38,14 +38,14 @@ Wrappers will allow us to add functionality to environments, such as modifying o
 4. `FrameStack(env, frame_dim[2])`: Stack 'k' (frame_dim[2]) last frames. Returns lazy array, which is much more memory efficient.
 
 ### `custom_reward_wrpper.py`: 
-    **Takes the mario gym environment and applies a custom reward function**
-    **Give Position Rewars**: Rewards mario for going right and punishes him for going left
-    **Time Penalty**: Punishes mario by giving negative reward for doing nothing based on predefined time 
-    **Death Penalty**: Punishes mario by giving negative reward for dying or not reaching goal within allocated time
-    **score reward**: Rewards mario for increasing the ingame score.
-    **status_reward**: 
-        - Rewards mario for collecting a mushroom and getting tall or collecting a fire flower.
-        - Mario gets punished for loosing the fire flower or getting small again.
+**Takes the mario gym environment and applies a custom reward function**
+**Give Position Rewars**: Rewards mario for going right and punishes him for going left
+**Time Penalty**: Punishes mario by giving negative reward for doing nothing based on predefined time 
+**Death Penalty**: Punishes mario by giving negative reward for dying or not reaching goal within allocated time
+**score reward**: Rewards mario for increasing the ingame score.
+**status_reward**: 
+    - Rewards mario for collecting a mushroom and getting tall or collecting a fire flower.
+    - Mario gets punished for loosing the fire flower or getting small again.
 
 
 ### 3. `policy_agent.py`:
