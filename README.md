@@ -46,7 +46,7 @@ Here I am implementing following algorithm using Super Mario Bros Gym Environmen
 ## Getting Started
 1. Clone this [repo](https://github.com/KailashDN/Deep_Reinforcement_Learning_Gym.git) (for help see this [tutorial](https://help.github.com/articles/cloning-a-repository/)).
 2. Since I am doing this project solely to learn I have implemented it with both `Tensorflow 1.5.2` and `Pytorch`:
-3. Since there are two different framework I have created two python environemtn and created `.yml` file, clone of my both environment for easier project setup.
+3. Since there are two different framework I have created two python environment and created `.yml` file, clone of my both environment for easier project setup.
 4. The Environment link:
     - [DDQN: Tensorflow 1.15](https://github.com/KailashDN/Deep_Reinforcement_Learning_Gym/blob/main/DoubleDQN/RL_GPU_TF15.yml)
     - [Policy Gradient/Actor-Critic: PyTorch](https://github.com/KailashDN/Deep_Reinforcement_Learning_Gym/blob/main/Actor_Critic/RL_GPU_TORCH.yml)
