@@ -6,7 +6,8 @@ In reinforcement learning, we often use a learning concept called Q-learning. Q-
 
 ![DQN](/Images/DQN.png)
 [Image credit](https://mc.ai/introduction-to-double-deep-q-learning-ddqn/)
-
+<br />
+#### Deep Q-Network:
 ![DQN](/Images/DeepDQN.png)
 [Image credit](https://www.novatec-gmbh.de/wp-content/uploads/reinforcement_learning_loop-650x294.png)
 
