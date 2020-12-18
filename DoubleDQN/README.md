@@ -9,6 +9,9 @@ In reinforcement learning, we often use a learning concept called Q-learning. Q-
 
 In Double Deep Q Learning, the agent uses two neural networks to learn and predict what action to take at every step. One network, referred to as the Q network or the online network, is used to predict what to do when the agent encounters a new state. It takes in the state as input and outputs Q values for the possible actions that could be taken. 
 
+## How to run:
+python3 main_Mario.py
+
 ## Implementation: 
 ### Here I have explained some important code and working
 ### 1. `DeepQ_Network.py`: 
@@ -55,9 +58,9 @@ Steps:
 ## Results:
 Super Mario game trained on GTX 1050Ti using TensorFlow 1.5.2(TF2.x Multi GPU parallel version coming soon!!)
 
-![](https://github.com/KailashDN/Deep_Reinforcement_Learning_Gym/blob/main/Images/DDQN_reward.png)
+![](/Images/DDQN_reward.png)
 
-![](https://github.com/KailashDN/Deep_Reinforcement_Learning_Gym/blob/main/Images/DDQN_train.gif)
+![](/Images/DDQN_train.gif)
 
 
 

@@ -29,9 +29,9 @@ OpenAI Gym gives us game environments in which our programs can take actions. Ea
 When your agent observes the change, it uses the new status together with its policy to decide what move to make next. The policy is key: it is the essential element for your program to keep working on. The better the policy your agent learns, the better the performance you get out of it.
 
 Here I am implementing following algorithm using Super Mario Bros Gym Environment:
-1. [`DDQN (Deep Double Q learning):`](https://github.com/KailashDN/Deep_Reinforcement_Learning_Gym/tree/main/DoubleDQN)
-2. [`Policy Gradient`:](https://github.com/KailashDN/Deep_Reinforcement_Learning_Gym/tree/main/Policy_Gradient)
-3. [`Actor-Critic`:](https://github.com/KailashDN/Deep_Reinforcement_Learning_Gym/tree/main/Actor_Critic)
+### 1. [`DDQN (Deep Double Q learning)`](https://github.com/KailashDN/Deep_Reinforcement_Learning_Gym/tree/main/DoubleDQN)
+### 2. [`Policy Gradient`](https://github.com/KailashDN/Deep_Reinforcement_Learning_Gym/tree/main/Policy_Gradient)
+### 3. [`Actor-Critic`](https://github.com/KailashDN/Deep_Reinforcement_Learning_Gym/tree/main/Actor_Critic)
 
 ## Needs of this project:
 #### The project need good understanding of:
@@ -54,7 +54,7 @@ Here I am implementing following algorithm using Super Mario Bros Gym Environmen
     - `conda create -n new_env -f=\path\to\RL_GPU_TORCH.yml` 
         <br />OR
     - `conda create --name new_env --file \path\to\RL_GPU_TORCH.yml` 
-## How to Run:
+## How to Load and Run:
 ### 1. PyCharm [Install Guid](https://www.jetbrains.com/help/pycharm/installation-guide.html):
 1. Clone and open project in pycharm
 2. Check Available [GPU](https://github.com/KailashDN/Deep_Reinforcement_Learning_Gym/blob/main/check_available_gpu.py)
@@ -72,9 +72,13 @@ CUDA Version: 10.2
 | Actor-Critic | ![](https://github.com/KailashDN/Deep_Reinforcement_Learning_Gym/blob/main/Images/Actor_critic_train.gif) | ![](https://github.com/KailashDN/Deep_Reinforcement_Learning_Gym/blob/main/Images/Actor_Critic_reward.png) |
 | Policy Gradient | ![](https://github.com/KailashDN/Deep_Reinforcement_Learning_Gym/blob/main/Images/policy_gradient_train.gif) | ![](https://github.com/KailashDN/Deep_Reinforcement_Learning_Gym/blob/main/Images/DDQN_reward.png) |
 
+## Future Work:
+Implementation of Asynchronous Advantage Actor-Critic (A3C), synchronous, deterministic A3C (A2C), Deterministic policy gradient (DPG), Twin Delayed Deep Deterministic(TD3)
+
 ## Citations
 - https://console.paperspace.com/gcn-team/notebook/pr5ddt1g9
 - https://github.com/p-christ/Deep-Reinforcement-Learning-Algorithms-with-PyTorch
+- 
 - https://github.com/sweetice/Deep-reinforcement-learning-with-pytorch
 - https://www.statworx.com/de/blog/using-reinforcement-learning-to-play-super-mario-bros-on-nes-using-tensorflow/
 - https://mc.ai/introduction-to-double-deep-q-learning-ddqn/
