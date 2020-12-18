@@ -3,7 +3,7 @@
 
 [![PythonVersion](https://img.shields.io/badge/Python-3.6.9-green.svg)](https://www.python.org/downloads/release/python-369/)
 [![PythonVersion](https://img.shields.io/badge/gym_super_mario_bros-7.3.2-blue.svg)](https://pypi.org/project/gym-super-mario-bros/7.3.2/)
-[![PythonVersion](https://img.shields.io/badge/TensorFlow-1.15-red.svg)](https://www.tensorflow.org/install/gpu)
+[![PythonVersion](https://img.shields.io/badge/TensorFlow-1.15(Cuda:10.2)-red.svg)](https://www.tensorflow.org/install/gpu)
 [![PythonVersion](https://img.shields.io/badge/PyTorch-1.5.1(Cuda:10.1)-red.svg)](https://pytorch.org/get-started/previous-versions/)
 [![License][pypi-license]](LICENSE)
 
