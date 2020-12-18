@@ -73,7 +73,7 @@ CUDA Version: 10.2
 |---------|-----------------|-----------------------------------|
 | DDQN      | ![](/Images/DDQN_train.gif)| ![](/Images/DDQN_reward.png) |
 | Actor-Critic | ![](/Images/Actor_critic_train.gif) | ![](/Images/Actor_Critic_reward.png) |
-| Policy Gradient | ![](/Images/policy_gradient_train.gif) | ![](/Images/policy_gradient_reward.png) |
+| Policy Gradient | ![](/Images/policy_gradient_train.gif) | ![](/Images/Policy_gradient_reward.png) |
 
 ## Future Work:
 Implementation of Asynchronous Advantage Actor-Critic (A3C), synchronous, deterministic A3C (A2C), Deterministic policy gradient (DPG), Twin Delayed Deep Deterministic(TD3)
