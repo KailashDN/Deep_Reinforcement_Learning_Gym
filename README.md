@@ -9,7 +9,7 @@
 
 ## Project Goal
 ### The purpose of the project is to implement and create documentation for Deep Reinforcement learning Algorithm like DDQN, policy gradient, actor-critic 
-### This Work is done for Course CSYE 7370 Deep Reinforcement Learning uder guidance of Prof. Nicholas Brown
+### _This Work is done for Course CSYE 7370 Deep Reinforcement Learning uder guidance of Prof. Nicholas Brown_
 ## Abstract
 Reinforcement learning is the family of learning algorithms in which an agent learns from its environment by interacting with it. What does it learn? Informally, an agent learns to take actions that bring it from its current state to the best (optimal) reachable state.
 
