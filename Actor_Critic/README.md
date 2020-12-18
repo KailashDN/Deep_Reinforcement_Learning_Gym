@@ -6,10 +6,9 @@ Actor-critic learning is a reinforcement-learning technique in which you simulta
 
 Actor-critic methods are Temporal difference(TD) methods that have a separate memory structure to explicitly represent the policy independent of the value function. The policy structure is known as the actor, because it is used to select actions, and the estimated value function is known as the critic, because it criticizes the actions made by the actor. Learning is always on-policy: the critic must learn about and critique whatever policy is currently being followed by the actor. The critique takes the form of a TD error. This scalar signal is the sole output of the critic and drives all learning in both actor and critic
 
-![DQN](/Images/Actor_Critic.png)
+![ActorCritic](/Images/Actor_Critic.png)
 [Image credit](https://theaisummer.com/assets/img/posts/Actor_critics/ac.jpg)
 
-In Double Deep Q Learning, the agent uses two neural networks to learn and predict what action to take at every step. One network, referred to as the Q network or the online network, is used to predict what to do when the agent encounters a new state. It takes in the state as input and outputs Q values for the possible actions that could be taken. 
 
 ## Implementation: 
 ### Here I have explained some important code and working
