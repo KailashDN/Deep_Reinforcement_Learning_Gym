@@ -58,7 +58,7 @@ Here I am implementing following algorithm using Super Mario Bros Gym Environmen
 ### 1. PyCharm [Install Guid](https://www.jetbrains.com/help/pycharm/installation-guide.html):
 1. Clone and open project in pycharm
 2. Check Available [GPU](https://github.com/KailashDN/Deep_Reinforcement_Learning_Gym/blob/main/check_available_gpu.py)
-3. Each Reinforcement Learning method has saperate folder where you can find and run the main file.
+3. Each Reinforcement Learning method has separate folder where you can find and run the main file.
 ### 2. Jupyter:
 1. Each Reinforcement Learning method has Jupyter Notebook for better understanding of project pipeline
 
