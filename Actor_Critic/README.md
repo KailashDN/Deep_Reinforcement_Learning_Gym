@@ -64,33 +64,37 @@ We have Two classes in agent:
     - Update the **trajectory**
 - Bothe agent have functionality to save and load the model 
 
-
-### 4. `policy_main.py`:
-#### Run policy_main.py to train super mario. 
+### 4. `main.py`:
+#### Run main.py to train super mario. 
 Steps:
 1. Environment Setting:
     - Set mario world, stage, Level Name("SuperMarioBros-{}-{}-v0".format(WORLD, STAGE))
-    - ACTION_SPACE: Marion movement(SIMPLE_MOVEMENT, RIGHT_ONLY, or COMPLEX_MOVEMENT)
+    - ACTION_SPACE: Mario movement(SIMPLE_MOVEMENT, RIGHT_ONLY, or COMPLEX_MOVEMENT)
 2. Set Hyperparameters:
-    - LEARNING_RATE, NUM_EPOCHS, GAMMA etc.
-3. Create Environment:
+    - ACTOR_LEARNING_RATE, CRITIC_LEARNING_RATE, GAMMA, ENTROPY_SCALING, NUM_EPISODES, FRAME_DIM, FRAME_SKIP etc.
+4. Create path to save and load both model
+4. Create Environment:
     - Create mario environment for specified level
     - Apply *JoypadSpace(env, ACTION_SPACE)* wrapper to convert binary to discrete action space (ACTION_SPACE = SIMPLE_MOVEMENT)
     - Apply wrapper class to modify frames
-4. Create Mario agent
+    - Apply Custom Wrapper class(optional)
+4. Create Mario agent:
+    - Either TwoNetAgent or TwoHeadAgent
 5. Train The Mario Model for *NUM_EPOCHS(1001)*:<br />
     - At each epoch check the cuda memory, reset the state and last reward<br />
+    - Create trajectory list to store trajectory of each episode
     - For each step (Iterate actions untile level cleared or marion died):
-        - 5.1 Perform action:
+        - 5.1 Get the next action
+        - 5.2 Perform action:
             - Sample action and log probability of action from probability distributions of agents action predictions
-        - 5.2 Delete the last state to prevent memory overflow
-        - 5.3 Calculate the `state`, `reward`, and `metadata` for current action
-        - 5.4 If agent died the reward will be less than zero, update the reward history
-        - 5.5 If Mario solved the current level the highest possible reward of 15 is awarded( level finish)
-        - 5.6 Convert the frame to tensor(height x width x depth) for pytorch
-        - 5.7 Update Reward History
-    - 5.8 For Each Episode calculate the loss
-    - 5.9 Iterate next episode
+        - 5.3 Add the score to the reward. 4 points as reward for 100 score gain by mario in environment
+        - 5.4 Add the transition to the trajectory (`state`, `action`, `reward`, and `metadata`) for current action
+        - 5.5 Update total reward
+        - 5.6 Render the game for each step
+        - 5.7 Update the stat
+        - 5.8 For Each Episode calculate the loss
+    - For each episode update the actor loss and critic loss
+    - Iterate for given episodes 
 
 ## Results:
 Super Mario game trained on GTX 1050Ti using Pytorch GPU
