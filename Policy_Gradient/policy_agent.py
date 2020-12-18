@@ -3,7 +3,7 @@ from torch.distributions import Categorical
 import torch
 import numpy as np
 
-from Policy_Gradient.policy_model import Policy
+from policy_model import Policy
 
 
 class Agent:

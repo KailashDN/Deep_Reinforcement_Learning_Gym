@@ -137,8 +137,12 @@ for episode in range(NUM_EPISODES):
         current_exploration = max(EXPLORATION_MIN, current_exploration)
 
     # plot the reward history
-    if (episode + 1) % 10 == 0 and episode > 100:
-        plt.plot(reward_history, "b-", mean_reward_history, "r-")
-        plt.ylabel("Rewards")
-        plt.xlabel("Episodes")
+    if (episode + 1) % 10 == 0 and episode > 5:
+        plt.figure(figsize=(12, 6))
+        plt.plot(reward_history, "#00b4f5", label="Reward History")
+        plt.plot(mean_reward_history, "#c8eb02", label="Mean Reward History")
+        plt.ylabel("Rewards", fontsize=18)
+        plt.xlabel("Episodes", fontsize=18)
+        plt.title("Reward Per Episode", fontsize=18)
+        plt.legend()
         plt.show()
