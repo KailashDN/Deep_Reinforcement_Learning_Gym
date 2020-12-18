@@ -68,9 +68,9 @@ CUDA Version: 10.2
 <!-- ![Training](/Images/Mario_Training.png)![Training](/Images/Mario_Training1.png)![Training](/Images/Mario_Training2.png)-->
 |Algorithm Name     |  Training Video  |  Training Plot |
 |---------|-----------------|-----------------------------------|
-| DDQN      | ![](https://github.com/KailashDN/Deep_Reinforcement_Learning_Gym/blob/main/Images/DDQN_train.gif)| ![](https://github.com/KailashDN/Deep_Reinforcement_Learning_Gym/blob/main/Images/DDQN_reward.png) |
-| Actor-Critic | ![](https://github.com/KailashDN/Deep_Reinforcement_Learning_Gym/blob/main/Images/Actor_critic_train.gif) | ![](https://github.com/KailashDN/Deep_Reinforcement_Learning_Gym/blob/main/Images/Actor_Critic_reward.png) |
-| Policy Gradient | ![](https://github.com/KailashDN/Deep_Reinforcement_Learning_Gym/blob/main/Images/policy_gradient_train.gif) | ![](https://github.com/KailashDN/Deep_Reinforcement_Learning_Gym/blob/main/Images/DDQN_reward.png) |
+| DDQN      | ![](/Images/DDQN_train.gif)| ![](/Images/DDQN_reward.png) |
+| Actor-Critic | ![](/Images/Actor_critic_train.gif) | ![](/Images/Actor_Critic_reward.png) |
+| Policy Gradient | ![](/Images/policy_gradient_train.gif) | ![](/Images/DDQN_reward.png) |
 
 ## Future Work:
 Implementation of Asynchronous Advantage Actor-Critic (A3C), synchronous, deterministic A3C (A2C), Deterministic policy gradient (DPG), Twin Delayed Deep Deterministic(TD3)
