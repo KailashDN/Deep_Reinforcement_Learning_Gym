@@ -1,16 +1,17 @@
 # Deep Reinforcement Learning:
 ### The purpose of the project is to implement and create documentation for Deep Reinforcement learning Algorithm like DDQN, policy gradient, actor-critic 
 
-[![PackageVersion][pypi-version]][pypi-home]
-[![PythonVersion][python-version]][python-home]
+[![PythonVersion](https://img.shields.io/badge/Python-3.6.9-green.svg)](https://www.python.org/downloads/release/python-369/)
+[![PythonVersion](https://img.shields.io/badge/gym_super_mario_bros-7.3.2-blue.svg)](https://pypi.org/project/gym-super-mario-bros/7.3.2/)
+[![PythonVersion](https://img.shields.io/badge/TensorFlow-1.15-red.svg)](https://www.tensorflow.org/install/gpu)
+[![PythonVersion](https://img.shields.io/badge/PyTorch-1.5.1(Cuda:10.1)-red.svg)](https://pytorch.org/get-started/previous-versions/)
 [![License][pypi-license]](LICENSE)
 
 [pypi-version]: https://badge.fury.io/py/gym-super-mario-bros.svg
 [pypi-home]: https://badge.fury.io/py/gym-super-mario-bros
 [python-version]: https://img.shields.io/pypi/pyversions/gym-super-mario-bros.svg
-[python-home]: https://python.org
 [pypi-license]: https://img.shields.io/pypi/l/gym-super-mario-bros.svg
-    
+
 ## Abstract
 Reinforcement learning is the family of learning algorithms in which an agent learns from its environment by interacting with it. What does it learn? Informally, an agent learns to take actions that bring it from its current state to the best (optimal) reachable state.
 
