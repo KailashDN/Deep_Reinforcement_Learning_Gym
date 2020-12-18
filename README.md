@@ -54,7 +54,7 @@ Here I am implementing following algorithm using Super Mario Bros Gym Environmen
     - `conda create -n new_env -f=\path\to\RL_GPU_TORCH.yml` 
         <br />OR
     - `conda create --name new_env --file \path\to\RL_GPU_TORCH.yml` 
-## How to Run:
+## How to Load and Run:
 ### 1. PyCharm [Install Guid](https://www.jetbrains.com/help/pycharm/installation-guide.html):
 1. Clone and open project in pycharm
 2. Check Available [GPU](https://github.com/KailashDN/Deep_Reinforcement_Learning_Gym/blob/main/check_available_gpu.py)
@@ -75,6 +75,7 @@ CUDA Version: 10.2
 ## Citations
 - https://console.paperspace.com/gcn-team/notebook/pr5ddt1g9
 - https://github.com/p-christ/Deep-Reinforcement-Learning-Algorithms-with-PyTorch
+- 
 - https://github.com/sweetice/Deep-reinforcement-learning-with-pytorch
 - https://www.statworx.com/de/blog/using-reinforcement-learning-to-play-super-mario-bros-on-nes-using-tensorflow/
 - https://mc.ai/introduction-to-double-deep-q-learning-ddqn/
