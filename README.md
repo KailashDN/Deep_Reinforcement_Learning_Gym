@@ -66,7 +66,7 @@ Here I am implementing following algorithm using Super Mario Bros Gym Environmen
 Super Mario game trained on GTX 1050Ti using TensorFlow 1.5.2(TF2.x Multi GPU parallel version coming soon!!) and Pytorch.
 CUDA Version: 10.2
 <!-- ![Training](/Images/Mario_Training.png)![Training](/Images/Mario_Training1.png)![Training](/Images/Mario_Training2.png)-->
-|Algorithm Name     |  Training Video  |  Training Plot |
+|Algorithm Name     |  Training Video  |  Training Reward History |
 |---------|-----------------|-----------------------------------|
 | DDQN      | ![](/Images/DDQN_train.gif)| ![](/Images/DDQN_reward.png) |
 | Actor-Critic | ![](/Images/Actor_critic_train.gif) | ![](/Images/Actor_Critic_reward.png) |
