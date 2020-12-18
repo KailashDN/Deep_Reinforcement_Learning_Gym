@@ -9,7 +9,7 @@ In reinforcement learning, we often use a learning concept called Q-learning. Q-
 
 In Double Deep Q Learning, the agent uses two neural networks to learn and predict what action to take at every step. One network, referred to as the Q network or the online network, is used to predict what to do when the agent encounters a new state. It takes in the state as input and outputs Q values for the possible actions that could be taken. 
 
-## How to run
+## How to run:
 python3 main_Mario.py
 
 ## Implementation: 
