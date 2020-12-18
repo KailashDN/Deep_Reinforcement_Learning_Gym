@@ -5,6 +5,7 @@
 [![PythonVersion](https://img.shields.io/badge/TensorFlow-1.15(Cuda:10.2)-red.svg)](https://www.tensorflow.org/install/gpu)
 [![PythonVersion](https://img.shields.io/badge/PyTorch-1.5.1(Cuda:10.1)-red.svg)](https://pytorch.org/get-started/previous-versions/)
 [![License][pypi-license]](LICENSE)
+
 [pypi-license]: https://img.shields.io/pypi/l/gym-super-mario-bros.svg
 
 ## Project Goal
