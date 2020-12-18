@@ -1,8 +1,15 @@
-# Deep Double Q-Learning:
-### Implementation of Deep Reinforcement learning Algorithm: DDQN
+# Policy Gradient:
+### Implementation of Deep Reinforcement learning Algorithm Policy Gradient to play Super Mario Bros Game
     
 ## Abstract
-In reinforcement learning, we often use a learning concept called Q-learning. Q-learning is based on so-called Q-values, that help the agent determining the optimal action, given the current state of the environment. Q-values are „discounted“ future rewards, that our agent collects during training by taking actions and moving through the different states of the environment. Q-values themselves are tried to be approximated during training, either by a simple exploration of the environment or by using a function approximator, such as a deep neural network (as in our case here). Mostly, we select in each state the action that has the highest Q-value, i.e. the highest discounted future reward, given the current state of the environment.
+
+The objective of a Reinforcement Learning agent is to maximize the "expected" reward when following a policy *π*.<br />
+Like any Machine Learning setup, we define a set of parameters *θ* (e.g. the coefficients of a complex polynomial or the weights and biases of units in a neural network) to parametrize this policy — *π_θ* (also written a π for brevity).<br />
+If we represent the total reward for a given trajectory *τ* as *r(τ)*, we arrive at the following definition.
+Reinforcement Learning Objective: Maximize the “expected” reward following a parametrized policy: <br />
+                            **_J(θ)=Eπ​[r(τ)]_**
+
+
 
 ![DQN](/Images/DQN.png)
 [Image credit](https://mc.ai/introduction-to-double-deep-q-learning-ddqn/)
