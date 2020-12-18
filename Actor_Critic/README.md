@@ -79,5 +79,3 @@ Super Mario game trained on GTX 1050Ti using Pytorch GPU
 
 
 
-
-
