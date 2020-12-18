@@ -53,8 +53,19 @@ Steps:
     - Apply *JoypadSpace(env, ACTION_SPACE)* wrapper to convert binary to discrete action space (ACTION_SPACE = SIMPLE_MOVEMENT)
     - Apply wrapper class to modify frames
 4. Create Mario agent
-5. Train Thge Mario:
-    5.1 
+5. Train The Mario Model for *NUM_EPOCHS(1001)*:
+    At each epoch check the cuda memory, reset the state and last reward
+    For each step:
+    5.1 Perform action:
+        - Sample action and log probability of action from probability distributions of agents action predictions
+    - 5.2 Delete the last state to prevent memory overflow
+    - 5.3 Calculate the `state`, `reward`, and `metadata` for current action
+    - 5.4 If agent died the reward will be less than zero, update the reward history
+    - 5.5 If Mario solved the current level the highest possible reward of 15 is awarded( level finish)
+    - 
+
+
+
 2. apply *JoypadSpace(env, ACTION_SPACE)* environment wrapper to convert binary to discrete action space (ACTION_SPACE = RIGHT_ONLY) Apply wrapper class to modify frames
 3. Create 2 policy network since we are implementing Double DQN
     - 3.1 `policy_net`
