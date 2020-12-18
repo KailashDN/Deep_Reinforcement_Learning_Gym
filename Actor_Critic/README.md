@@ -16,11 +16,11 @@ Actor-critic methods are Temporal difference(TD) methods that have a separate me
 ### Here I have explained some important code and working
 
 ### 1. `model.py`: 
-We have Three Convolutional Neural Network Model to learn and predict what action to take.
+We have Three Convolutional Neural Network Model to learn and predict what action to take.<br />
 This 3 Neural network are implemtation of two type:
-    1. ActorCriticNet: Two Head Agent
-    2. ActorNet: Two Net Agent
-    3. CriticNet: Two Net Agent
+1. ActorCriticNet: Two Head Agent
+2. ActorNet: Two Net Agent
+3. CriticNet: Two Net Agent
 Each Network class takes two inputs:
 #### 
     1. :param frame_dim: The dimension of the given frames
@@ -37,18 +37,23 @@ Wrappers will allow us to add functionality to environments, such as modifying o
 
 4. `FrameStack(env, frame_dim[2])`: Stack 'k' (frame_dim[2]) last frames. Returns lazy array, which is much more memory efficient.
 
-### `custom_reward_wrpper.py`: 
-**Takes the mario gym environment and applies a custom reward function**
-**Give Position Rewars**: Rewards mario for going right and punishes him for going left
-**Time Penalty**: Punishes mario by giving negative reward for doing nothing based on predefined time 
-**Death Penalty**: Punishes mario by giving negative reward for dying or not reaching goal within allocated time
-**score reward**: Rewards mario for increasing the ingame score.
-**status_reward**: 
+### `custom_reward_wrapper.py`: 
+- **Takes the mario gym environment and applies a custom reward function**
+- **Give Position Rewars**: Rewards mario for going right and punishes him for going left
+- **Time Penalty**: Punishes mario by giving negative reward for doing nothing based on predefined time 
+- **Death Penalty**: Punishes mario by giving negative reward for dying or not reaching goal within allocated time
+- **score reward**: Rewards mario for increasing the ingame score.
+- **status_reward**: 
     - Rewards mario for collecting a mushroom and getting tall or collecting a fire flower.
     - Mario gets punished for loosing the fire flower or getting small again.
 
-
-### 3. `policy_agent.py`:
+### 3. `agent.py`:
+We have Two classes in agent:
+1. **TwoNetAgent**:
+    It uses two saperate CNN model:`
+    - ActorNet
+    - CriticNet
+    - 
 - Select action based on current state of agent
 - Returns the sampled action and the log of the probability density.
 - Here we calculate the probability distribution of the prediction of actions using policy model
