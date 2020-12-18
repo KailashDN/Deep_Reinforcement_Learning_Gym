@@ -1,4 +1,4 @@
-# Deep Double Q-Learning:
+# Deep Q-Learning:
 ### Implementation of Deep Reinforcement learning Algorithm: DDQN
     
 ## Abstract
