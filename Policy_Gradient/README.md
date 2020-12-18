@@ -21,7 +21,7 @@ If we represent the total reward for a given trajectory *τ* as *r(τ)*, we arri
     Step 5: Adjusts actions based on the total rewards _R(τ)_ received.
 
 ## How to run:
-python3 main.py
+    python3 main.py
 
 ## Implementation: 
 ### Here I have explained some important code and working
