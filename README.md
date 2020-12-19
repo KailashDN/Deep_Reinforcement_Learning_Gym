@@ -66,7 +66,7 @@ Here I am implementing following algorithm using Super Mario Bros Gym Environmen
 1. Each Reinforcement Learning method has Jupyter Notebook for better understanding of project pipeline
 
 ## Results:
-Super Mario game trained on GTX 1050Ti using TensorFlow 1.5.2(TF2.x Multi GPU parallel version coming soon!!) and Pytorch.
+Super Mario game trained on GTX 1050Ti-GB  and Tesla P100-12GB using TensorFlow 1.5.2(TF2.x Multi GPU parallel version coming soon!!) and Pytorch.
 CUDA Version: 10.2
 <!-- ![Training](/Images/Mario_Training.png)![Training](/Images/Mario_Training1.png)![Training](/Images/Mario_Training2.png)-->
 |Algorithm Name     |  Training Video  |  Training Reward History |
